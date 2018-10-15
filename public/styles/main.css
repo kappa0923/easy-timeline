@@ -1,0 +1,82 @@
+:root {
+  --mdc-theme-primary: #FF9800;
+  --mdc-theme-secondary: #66bb6a;
+}
+
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  height: 95%;
+  background: #eee;
+}
+
+.timeline-main {
+  height: 100%;
+}
+
+.parallel-contents {
+  height: 87%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow-y: scroll;
+}
+
+.parallel-form {
+  height: 8%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.timeline-body {
+  height: 97%;
+  width: 48%;
+  overflow-y: scroll;
+  margin-bottom: 12px;
+}
+
+.post-item {
+  width: 100%;
+  margin-bottom: 12px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.post-item.visible {
+  opacity: 1;
+}
+
+.post-form {
+  width: 100%;
+  background: white;
+}
+
+#post-input-field {
+  background: white;
+}
+
+.mdc-text-field {
+  width: 75%;
+}
+
+.mdc-card {
+  min-height: 0;
+  background: white;
+  flex-direction: row;
+}
+
+.mdc-text-field__input {
+  background: white;
+}
+
+@media (max-width: 599px){
+  .mdc-image-list__item {
+    width: calc(100% / 3 - 8px);
+    margin: 4px;
+    object-fit: cover;
+  }
+
+  .mdc-text-field {
+    width: 65%
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Learn how to use the Firebase platform on the Web">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Easy Timeline</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="styles/main.css">
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+<body class="mdc-typography">
+  <header class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall demo-toolbar mdc-toolbar--flexible-space-maximized">
+    <div class="mdc-toolbar__row">
+      <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+        <i class="material-icons mdc-toolbar__menu-icon">timeline</i>
+        <span class="mdc-toolbar__title">Fire Timeline</span>
+      </section>
+    </div>
+  </header>
+  <main class="timeline-main">
+    <div class="mdc-toolbar-fixed-adjust"></div>
+    <!-- Timeline container -->
+    <div class="parallel-contents">
+      <div class="timeline-body">
+        <ul id="myTimeline" class="mdc-list mdc-list--two-line mdc-list--avatar-list">
+        </ul>
+      </div>
+      <div class="timeline-body">
+        <ul id="otherTimeline" class="mdc-list mdc-list--two-line mdc-list--avatar-list">
+        </ul>
+      </div>
+    </div>
+
+    <!-- Post form -->
+    <div class="parallel-form">
+      <div id="myPostForm" class="post-form">
+        <form class="mdc-text-field" action="#">
+          <input type="text" id="myPostInput" class="mdc-text-field__input">
+          <label class="mdc-floating-label" for="myPostInput">Message...</label>
+          <div class="mdc-line-ripple"></div>
+        </form>
+        <button id="myPostButton" class="mdc-button">SEND</button>
+      </div>
+      <div id="otherPostForm" class="post-form">
+        <form class="mdc-text-field" action="#">
+          <input type="text" id="otherPostInput" class="mdc-text-field__input">
+          <label class="mdc-floating-label" for="otherPostInput">Message...</label>
+          <div class="mdc-line-ripple"></div>
+        </form>
+        <button id="otherPostButton" class="mdc-button">SEND</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- TODO : 04. ここにスニペットをコピー -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+  </script>
+  <!-- 04. end -->
+
+  <!-- MDC -->
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <script defer src="scripts/index.js"></script>
+</body>
+
+</html>
