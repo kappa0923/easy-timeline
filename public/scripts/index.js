@@ -73,10 +73,6 @@ class EasyTimeline {
     this.otherPostButton.addEventListener('click', this.postClicked.bind(this, POST_BUTTON.OTHER));
 
     this.initFirebase();
-
-    // TODO : 07. 画像を指定して表示
-    // TODO : 08. リアルタイム表示するなら不要
-    // this.loadPictures('pic-01', '1523809671051.jpg', false);
   }
 
   /**
@@ -96,23 +92,24 @@ class EasyTimeline {
         for (const change of querySnapshot.docChanges()) {
           if (change.type === 'added') {
             const doc = change.doc;
-            this.displayPost(doc.id, doc.data().userName,
+            this.displayPost(doc.id + myUserId, doc.data().userName,
               doc.data().message, doc.data().userPic, DISPLAY_TYPE.MY);
           }
         }
       });
 
+    // TODO : タイムラインの情報をFirestoreから読み出し
     myUserRef.collection('timeline')
       .orderBy('postAt')
       .onSnapshot((querySnapshot) => {
         for (const change of querySnapshot.docChanges()) {
           if (change.type === 'added') {
             const doc = change.doc;
-            this.displayPost(doc.id, doc.data().userName,
+            this.displayPost(doc.id + otherUserId, doc.data().userName,
               doc.data().message, doc.data().userPic, DISPLAY_TYPE.OTHER);
           }
         }
-      })
+      });
   }
 
   displayPost(key, name, text, picUrl, displayType) {
@@ -126,8 +123,10 @@ class EasyTimeline {
       item = container.firstChild;
       item.setAttribute('id', key);
       if (displayType === DISPLAY_TYPE.MY) {
+        console.log('post : ' + text);
         this.myTimeline.appendChild(item);
       } else {
+        console.log('timeline : ' + text);
         this.otherTimeline.appendChild(item);
       }
     }
@@ -168,6 +167,7 @@ class EasyTimeline {
     let userRef;
     let message;
 
+    // ボタン押下時に投稿を取得
     switch (postType) {
       case POST_BUTTON.MY:
         userId = myUserId;
@@ -192,6 +192,7 @@ class EasyTimeline {
 
     const postRef = userRef.collection('posts');
 
+    // Firesotreへの保存処理
     postRef.add({
       userName: userId,
       message: message,
