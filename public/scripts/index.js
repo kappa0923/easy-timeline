@@ -1,4 +1,6 @@
 /**
+ * MIT License
+ * 
  * Copyright (c) 2018 kappa0923.
  *
  * Permission is hereby granted, free of charge, to any person obtaining

@@ -33,7 +33,7 @@ Firebaseを利用してタイムラインアプリを作ります！
   - Firebaseを使うために必要です
 - (Codeエディタ)
   - ローカルでコードを編集したい方は
-- Node.js
+- (Node.js)
   - v6以上
   - ローカルで開発したい方は入れておいてください
 
@@ -109,9 +109,7 @@ firebase use <project_id>
 firebase serve --only hosting --port 8080
 ```
 
-ウェブでプレビューボタンで確認
-
-<walkthrough-spotlight-pointer spotlightId="devshell-web-preview-button" text="Open Cloud Shell"></walkthrough-spotlight-pointer>
+<walkthrough-spotlight-pointer spotlightId="devshell-web-preview-button" text="ウェブでプレビューボタン"></walkthrough-spotlight-pointer>で確認
 
 こんな画面が表示されます。
 左側に自分の投稿が、右側に自分のタイムラインが表示されるように作っていきます。
@@ -123,7 +121,7 @@ firebase serve --only hosting --port 8080
 
 ![images/image005.png](https://github.com/kappa0923/easy-timeline/blob/master/images/image005.png?raw=true)
 
-一旦テストアプリなのでテストモードでデータベースを設定
+テストアプリなので、一旦テストモードでデータベースを設定
 
 ![images/image006.png](https://github.com/kappa0923/easy-timeline/blob/master/images/image006.png?raw=true)
 
