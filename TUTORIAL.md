@@ -21,7 +21,7 @@ Firebaseはアプリ開発のためのクラウドサービスでいわゆるmBa
 ### 何を作るの？
 Firebaseを利用してタイムラインアプリを作ります！
 
-https://easy-timeline.firebaseapp.com/
+[https://easy-timeline.firebaseapp.com/](https://easy-timeline.firebaseapp.com/)
 
 ### 今日のゴール
 ただタイムラインアプリを作るだけでなく、Firebaseってどう使うの？何ができるの？という部分を学んでいきましょう。
@@ -39,7 +39,7 @@ https://easy-timeline.firebaseapp.com/
 
 ## 2. Setup
 ### コードダウンロード
-https://github.com/kappa0923/easy-timeline にアクセスし、 `Open in Cloud Shell` をクリック。
+[https://github.com/kappa0923/easy-timeline](https://github.com/kappa0923/easy-timeline) にアクセスし、 `Open in Cloud Shell` をクリック。
 
 Cloud Shellが開かれ、サンプルコードがダウンロードされます。
 
@@ -65,7 +65,7 @@ firebase login --no-localhost
 
 Firebaseコンソールから「設定」「プロジェクトの設定」から `プロジェクトID` を確認
 
-![images/image001.png]
+![images/image001.png]()
 
 以下のコマンドを実行してFirebaseプロジェクトと紐づけます
 
@@ -77,10 +77,10 @@ firebase use <project_id>
 ### configの確認
 「Project Overview」「ウェブアプリにFirebaseを追加」と選択
 
-![images/image002.png]
+![images/image002.png]()
 
 ### configの追加
-<walkthrough-editor-open-file filePath="public/index.html" text="public/index.html"></walkthrough-editor-open-file>を開き、configをL65に追記して保存。
+<walkthrough-editor-open-file filePath="easy-timeline/public/index.html" text="public/index.html"></walkthrough-editor-open-file>を開き、configをL65に追記して保存。
 
 ```html
 <!-- TODO : 04. ここにスニペットをコピー -->
@@ -88,12 +88,12 @@ firebase use <project_id>
 <script>
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyAHVY2r5jVOvb1mM-CG5b9lc70ikH0Wu0U",
-    authDomain: "easy-timeline.firebaseapp.com",
-    databaseURL: "https://easy-timeline.firebaseio.com",
-    projectId: "easy-timeline",
-    storageBucket: "easy-timeline.appspot.com",
-    messagingSenderId: "665941225955"
+    apiKey: "XXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    authDomain: "hogehoge.firebaseapp.com",
+    databaseURL: "https://hogehoge.firebaseio.com",
+    projectId: "hogehoge",
+    storageBucket: "hogehoge.appspot.com",
+    messagingSenderId: "00000000000"
   };
   firebase.initializeApp(config);
 </script>
