@@ -84,32 +84,32 @@ class EasyTimeline {
     const settings = { timestampsInSnapshots: true };
     this.firestore.settings(settings);
 
-    // TODO : 08. 投稿の情報をFirestoreから読み出し
     const myUserRef = this.firestore.collection('users').doc(myUserId);
-    myUserRef.collection('posts')
-      .orderBy('postAt')
-      .onSnapshot((querySnapshot) => {
-        for (const change of querySnapshot.docChanges()) {
-          if (change.type === 'added') {
-            const doc = change.doc;
-            this.displayPost(doc.id + myUserId, doc.data().userName,
-              doc.data().message, doc.data().userPic, DISPLAY_TYPE.MY);
-          }
-        }
-      });
+    // TODO : 07. 投稿の情報をFirestoreから読み出し
+    // myUserRef.collection('posts')
+    //   .orderBy('postAt')
+    //   .onSnapshot((querySnapshot) => {
+    //     for (const change of querySnapshot.docChanges()) {
+    //       if (change.type === 'added') {
+    //         const doc = change.doc;
+    //         this.displayPost(doc.id + myUserId, doc.data().userName,
+    //           doc.data().message, doc.data().userPic, DISPLAY_TYPE.MY);
+    //       }
+    //     }
+    //   });
 
-    // TODO : タイムラインの情報をFirestoreから読み出し
-    myUserRef.collection('timeline')
-      .orderBy('postAt')
-      .onSnapshot((querySnapshot) => {
-        for (const change of querySnapshot.docChanges()) {
-          if (change.type === 'added') {
-            const doc = change.doc;
-            this.displayPost(doc.id + otherUserId, doc.data().userName,
-              doc.data().message, doc.data().userPic, DISPLAY_TYPE.OTHER);
-          }
-        }
-      });
+    // TODO : 10. タイムラインの情報をFirestoreから読み出し
+    // myUserRef.collection('timeline')
+    //   .orderBy('postAt')
+    //   .onSnapshot((querySnapshot) => {
+    //     for (const change of querySnapshot.docChanges()) {
+    //       if (change.type === 'added') {
+    //         const doc = change.doc;
+    //         this.displayPost(doc.id + otherUserId, doc.data().userName,
+    //           doc.data().message, doc.data().userPic, DISPLAY_TYPE.OTHER);
+    //       }
+    //     }
+    //   });
   }
 
   displayPost(key, name, text, picUrl, displayType) {
@@ -170,16 +170,18 @@ class EasyTimeline {
     // ボタン押下時に投稿を取得
     switch (postType) {
       case POST_BUTTON.MY:
-        userId = myUserId;
-        userRef = this.firestore.collection('users').doc(userId);
-        message = this.myPostInput.value;
-        this.myPostInput.value = '';
+        // TODO : 06. 自分の投稿の保存
+        // userId = myUserId;
+        // userRef = this.firestore.collection('users').doc(userId);
+        // message = this.myPostInput.value;
+        // this.myPostInput.value = '';
         break;
       case POST_BUTTON.OTHER:
-        userId = otherUserId;
-        userRef = this.firestore.collection('users').doc(userId);
-        message = this.otherPostInput.value;
-        this.otherPostInput.value = '';
+        // TODO : 08. 他人の投稿を保存
+        // userId = otherUserId;
+        // userRef = this.firestore.collection('users').doc(userId);
+        // message = this.otherPostInput.value;
+        // this.otherPostInput.value = '';
         break;
       default:
         break;
