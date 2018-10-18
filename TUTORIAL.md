@@ -65,7 +65,7 @@ firebase login --no-localhost
 
 Firebaseコンソールから「設定」「プロジェクトの設定」から `プロジェクトID` を確認
 
-![images/image001.png]()
+![images/image001.png](https://github.com/kappa0923/easy-timeline/blob/master/images/image001.png?raw=true)
 
 以下のコマンドを実行してFirebaseプロジェクトと紐づけます
 
@@ -77,7 +77,7 @@ firebase use <project_id>
 ### configの確認
 「Project Overview」「ウェブアプリにFirebaseを追加」と選択
 
-![images/image002.png]()
+![images/image002.png](https://github.com/kappa0923/easy-timeline/blob/master/images/image002.png?raw=true)
 
 ### configの追加
 <walkthrough-editor-open-file filePath="easy-timeline/public/index.html" text="public/index.html"></walkthrough-editor-open-file>を開き、configをL65に追記して保存。
